@@ -84,14 +84,14 @@ export function app(): express.Express {
         }
         const params = req.params[0];
         var seo: any = {
-          title: 'Healing Tube',
+          title: 'Travel Agent',
           description:
-            'Private video consultations with Naturopathic Doctors and Holistic Healers from around the world. Social Discussion on how to heal various ailments.',
+            'Speak face to face with travel agents locally or worldwide',
           image:
             'https://www.healing.tube/assets/images/Ht-Profile-pic-default.png',
           site: 'https://www.healing.tube/',
           url: 'https://www.healing.tube' + params,
-          keywords: 'HealingTube',
+          keywords: 'TravelAgent',
         };
         if (
           params.indexOf('communities/') > -1 ||
@@ -153,7 +153,7 @@ export function app(): express.Express {
           const pdhtml = document.createElement('div');
           pdhtml.innerHTML = post?.postdescription || post?.metadescription;
           const talent = {
-            name: post?.title || post?.albumname || 'Healing.Tube Post',
+            name: post?.title || post?.albumname || 'TravelAgent.Tube Post',
             description: pdhtml?.textContent || 'Post content',
             image: post?.thumbfilename || post?.metaimage || post?.imageUrl || 'https://www.healing.tube/assets/images/Ht-Profile-pic-default.png',
           };
@@ -170,7 +170,7 @@ export function app(): express.Express {
 
           console.log('group===>', group);
           const talent = {
-            name: `HealingTube Research ${group?.PageTitle}`,
+            name: `TravelAgent Research ${group?.PageTitle}`,
             description: group?.PageDescription,
             image: group?.CoverPicName || group?.ProfilePicName
           };

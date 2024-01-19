@@ -181,7 +181,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         this.isNavigationEnd = true;
       });
       const data = {
-        title: 'HealingTube',
+        title: 'TravelAgent',
         url: `${window.location.href}`,
       };
       this.seoService.updateSeoMetaData(data);
@@ -507,7 +507,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       data.link2 = this.sharedService?.advertizementLink[1]?.url;
     }
     modalRef.componentInstance.title = `Edit ${
-      data.pageType === 'community' ? 'Practitioner' : 'Page'
+      data.pageType === 'community' ? 'Travel Agent' : 'Page'
     } Details`;
     modalRef.componentInstance.cancelButtonLabel = 'Cancel';
     modalRef.componentInstance.confirmButtonLabel = 'Save';
@@ -516,7 +516,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     modalRef.result.then((res) => {
       if (res === 'success') {
         if (data.pageType === 'community') {
-          this.router.navigate(['health-practitioner']);
+          this.router.navigate(['travel-agent']);
         } else {
           this.router.navigate(['pages']);
         }
@@ -602,7 +602,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
                 this.router.navigate([
                   `${
                     this.communityDetails.pageType === 'community'
-                      ? 'health-practitioner'
+                      ? 'Travel agents'
                       : 'pages'
                   }`,
                 ]);
