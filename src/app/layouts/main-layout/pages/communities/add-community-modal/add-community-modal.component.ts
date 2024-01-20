@@ -206,12 +206,12 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
               this.submitted = true;
               this.practitionerId = res.data;
               this.createCommunityAdmin(res.data);
-              this.nextToApplication();
+              // this.nextToApplication();
               // this.toastService.success(
               //   'Your Health Practitioner will be approved within 24 hours!'
               // );
               this.activeModal.close('success');
-              // this.router.navigate(['/health-practitioner']);
+              this.router.navigate(['/health-practitioner']);
             }
           },
           error: (err) => {
