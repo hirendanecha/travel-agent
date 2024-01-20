@@ -88,7 +88,7 @@ export function app(): express.Express {
           description:
             'Speak face to face with travel agents locally or worldwide',
           image:
-            'https://www.healing.tube/assets/images/Ht-Profile-pic-default.png',
+            'https://www.healing.tube/assets/images/profile-cover.png',
           site: 'https://www.healing.tube/',
           url: 'https://www.healing.tube' + params,
           keywords: 'TravelAgent',
@@ -155,7 +155,7 @@ export function app(): express.Express {
           const talent = {
             name: post?.title || post?.albumname || 'TravelAgent.Tube Post',
             description: pdhtml?.textContent || 'Post content',
-            image: post?.thumbfilename || post?.metaimage || post?.imageUrl || 'https://www.healing.tube/assets/images/Ht-Profile-pic-default.png',
+            image: post?.thumbfilename || post?.metaimage || post?.imageUrl || 'https://www.healing.tube/assets/images/profile-cover.png',
           };
           seo.title = talent.name;
           seo.description = strip_html_tags(talent.description);

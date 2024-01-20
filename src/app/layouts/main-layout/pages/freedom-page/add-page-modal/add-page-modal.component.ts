@@ -18,7 +18,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./add-page-modal.component.scss'],
 })
 export class AddFreedomPageComponent implements OnInit, AfterViewInit {
-  @Input() title: string | undefined = 'Create Travel Topics';
+  @Input() title: string | undefined = 'Create Destination';
   @Input() cancelButtonLabel: string | undefined = 'Cancel';
   @Input() confirmButtonLabel: string | undefined = 'Create';
   @Input() closeIcon: boolean | undefined;
@@ -199,13 +199,13 @@ export class AddFreedomPageComponent implements OnInit, AfterViewInit {
                 this.createAdvertizeMentLink(res.data);
                 this.createCommunityAdmin(res.data);
                 this.activeModal.close('success');
-                this.toastService.success('Travel Topic created successfully');
+                this.toastService.success('Destination created successfully');
                 // this.router.navigateByUrl('/home');
               }
             },
             error:
               (err) => {
-                this.toastService.danger('Please change topic name. this topic name already in use.');
+                this.toastService.danger('Please change Destinations name. this Destinations name already in use.');
                 this.spinner.hide();
               }
           });
@@ -228,13 +228,13 @@ export class AddFreedomPageComponent implements OnInit, AfterViewInit {
               if (!res.error) {
                 this.submitted = true;
                 // this.createCommunityAdmin(res.data);
-                this.toastService.success('Your Travel Topic edit successfully!');
+                this.toastService.success('Your Travel Destinations edit successfully!');
                 this.activeModal.close('success');
               }
             },
             error:
               (err) => {
-                this.toastService.danger('Please change topic name. this topic name already in use.');
+                this.toastService.danger('Please change Destinations name. this Destinations name already in use.');
                 this.spinner.hide();
               }
           });

@@ -29,7 +29,7 @@ export class FreedomPageComponent {
 
     this.getPages();
     const data = {
-      title: 'Travel Topics',
+      title: 'Destinations',
       url: `${location.href}`,
       description: '',
     };
