@@ -27,7 +27,7 @@ import { PaymentService } from 'src/app/@shared/services/payment.service';
   styleUrls: ['./add-community-modal.component.scss'],
 })
 export class AddCommunityModalComponent implements OnInit, AfterViewInit {
-  @Input() title: string | undefined = 'Apply to be Health Practitioner';
+  @Input() title: string | undefined = 'Apply to be Travel Agent';
   @Input() cancelButtonLabel: string | undefined = 'Cancel';
   @Input() confirmButtonLabel: string | undefined = 'Create';
   @Input() closeIcon: boolean | undefined;
@@ -206,17 +206,17 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
               this.submitted = true;
               this.practitionerId = res.data;
               this.createCommunityAdmin(res.data);
-              this.nextToApplication();
+              // this.nextToApplication();
               // this.toastService.success(
               //   'Your Health Practitioner will be approved within 24 hours!'
               // );
               this.activeModal.close('success');
-              // this.router.navigate(['/health-practitioner']);
+              this.router.navigate(['/health-practitioner']);
             }
           },
           error: (err) => {
             this.toastService.danger(
-              'Please change practitioner. this practitioner name already in use.'
+              'Please change Agent. this Agent name already in use.'
             );
             this.spinner.hide();
           },
@@ -239,14 +239,14 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
               this.submitted = true;
               // this.createCommunityAdmin(res.data);
               this.toastService.success(
-                'Your Health Practitioner edit successfully!'
+                'Your Travel Agent edit successfully!'
               );
               this.activeModal.close('success');
             }
           },
           error: (err) => {
             this.toastService.danger(
-              'Please change Health Practitioner. this Health Practitioner name already in use.'
+              'Please change Agent. this Agent name already in use.'
             );
             this.spinner.hide();
           },
@@ -378,7 +378,7 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
 
   clearForm() {
     this.activeModal.close();
-    this.router.navigate(['/health-practitioner']);
+    this.router.navigate(['/travel-agent']);
   }
 
   isSelected(id: number): boolean {
@@ -437,7 +437,7 @@ export class AddCommunityModalComponent implements OnInit, AfterViewInit {
       modalRef.componentInstance.cancelButtonLabel = 'Cancel';
       modalRef.componentInstance.data = selectedSlot;
       modalRef.result.then((res) => {
-        this.router.navigate(['/health-practitioner']);
+        this.router.navigate(['/travel-agent']);
       });
     } else {
       this.toastService.danger('Please select your preference for billing.');
