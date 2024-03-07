@@ -1,4 +1,4 @@
-const url = 'http://api.travelagent.tube/';
+const url = 'http://api.travelagent.tube';
 const webUrl = 'https://travelagent.tube/';
 const tubeUrl = 'https://video.travelagent.tube/'
 
