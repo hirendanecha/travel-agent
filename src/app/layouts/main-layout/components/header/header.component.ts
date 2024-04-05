@@ -54,6 +54,7 @@ export class HeaderComponent {
     private socketService: SocketService
   ) {
     this.originalFavicon = document.querySelector('link[rel="icon"]');
+  if (this.tokenService.getToken()){
     this.socketService.socket.on('isReadNotification_ack', (data) => {
       if (data?.profileId) {
         this.sharedService.isNotify = false;
@@ -61,6 +62,7 @@ export class HeaderComponent {
         this.originalFavicon.href = '/assets/images/default-profile.jpg';
       }
     });
+  }
     const isRead = localStorage.getItem('isRead');
     if (isRead === 'N') {
       this.sharedService.isNotify = true;
