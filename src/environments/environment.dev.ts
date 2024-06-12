@@ -1,9 +1,9 @@
-// const url = 'http://api.travelagent.tube';
-// const webUrl = 'https://travelagent.tube/';
+const url = 'http://api.travelagent.tube';
+const webUrl = 'https://travelagent.tube/';
 const tubeUrl = 'https://video.travelagent.tube/'
 
-const url = 'http://192.168.1.22:8080';
-const webUrl = 'http://localhost:4200/';
+// const url = 'http://192.168.1.22:8080';
+// const webUrl = 'http://localhost:4200/';
 
 export const environment = {
   production: false,
