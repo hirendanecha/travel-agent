@@ -84,6 +84,7 @@ import {
   faPlane,
   faRefresh,
   faEyeSlash,
+  faSquarePlus,
 } from '@fortawesome/free-solid-svg-icons';
 import { ClaimTokenModalComponent } from './modals/clai-1776-token-modal/claim-token-modal.component';
 import { WalletLinkComponent } from './modals/wallet-download-modal/1776-wallet.component';
@@ -110,7 +111,8 @@ import { HealthPraatitionerCardComponent } from './components/health-partitioner
 import { EditPostModalComponent } from './modals/edit-post-modal/edit-post-modal.component';
 import { AppointmentModalComponent } from './modals/appointment-modal/appointment-modal.component';
 import { OpenStripeComponent } from './modals/open-stripe/open-stripe.component';
-import { AppointmentCallComponent } from '../layouts/main-layout/pages/appointment-call/appointment-call.component';
+import { AppointmentCallComponent } from './modals/appointment-call/appointment-call.component';
+import { ConferenceLinkComponent } from './modals/create-conference-link/conference-link-modal.component';
 
 const sharedComponents = [
   ConfirmationModalComponent,
@@ -139,6 +141,7 @@ const sharedComponents = [
   AppointmentModalComponent,
   OpenStripeComponent,
   AppointmentCallComponent,
+  ConferenceLinkComponent
 ];
 
 const sharedModules = [
@@ -235,6 +238,7 @@ export class SharedModule {
       faPlane,
       faRefresh,
       faEyeSlash,
+      faSquarePlus
     );
   }
 }
