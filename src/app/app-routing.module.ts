@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './layouts/auth-layout/pages/landing-page/landing-page.component';
-import { AppointmentCallComponent } from './layouts/main-layout/pages/appointment-call/appointment-call.component';
+import { AppointmentCallComponent } from './@shared/modals/appointment-call/appointment-call.component';
 
 const routes: Routes = [
   {
